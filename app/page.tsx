@@ -34,14 +34,54 @@ export default function OlistProjectPortfolioPage() {
   ];
 
   const sqlDirectory = [
-    { id: "sql-01", file: "01_data_audit.sql", name: "数据审计", desc: "用于完成数据预览、时间窗口确认、订单状态分布检查，以及州维度订单量与终态失败率摸底。" },
-    { id: "sql-02", file: "02_sales_performance.sql", name: "销售表现", desc: "用于输出核心经营指标、月度经营趋势，并补充支付方式与信用卡分期结构分析。" },
-    { id: "sql-03", file: "03_dimension_deep_dive.sql", name: "维度深挖", desc: "用于完成区域分析、履约分析，以及三表合并后的区域经营质量对比。" },
-    { id: "sql-11", file: "11_summary_kpi.sql", name: "首页总览指标", desc: "用于生成 summary_kpi 页的一行总览数据，包含成交总额、有效订单量、客单价、买家数、终态失败率与平均配送天数。" },
-    { id: "sql-12", file: "12_monthly_business_trend.sql", name: "月度经营趋势", desc: "用于生成月度趋势页数据，按月份输出成交总额、有效订单量与客单价。" },
-    { id: "sql-13", file: "13_state_performance.sql", name: "州维度表现", desc: "用于生成州表现页数据，综合输出客户州的成交、订单、客单价、终态失败率与配送时长。" },
-    { id: "sql-14", file: "14_payment_type_analysis.sql", name: "支付方式分析", desc: "用于生成支付方式页数据，比较不同支付方式下的订单量、成交总额与客单价。" },
-    { id: "sql-15", file: "15_installment_analysis.sql", name: "分期结构分析", desc: "用于生成分期分析页数据，比较不同信用卡分期档位下的订单数与平均订单金额。" },
+    {
+      id: "sql-01",
+      file: "01_data_audit.sql",
+      name: "数据审计",
+      desc: "用于完成数据预览、时间窗口确认、订单状态分布检查，以及州维度订单量与终态失败率摸底。",
+    },
+    {
+      id: "sql-02",
+      file: "02_sales_performance.sql",
+      name: "销售表现",
+      desc: "用于输出核心经营指标、月度经营趋势，并补充支付方式与信用卡分期结构分析。",
+    },
+    {
+      id: "sql-03",
+      file: "03_dimension_deep_dive.sql",
+      name: "维度深挖",
+      desc: "用于完成区域分析、履约分析，以及三表合并后的区域经营质量对比。",
+    },
+    {
+      id: "sql-11",
+      file: "11_summary_kpi.sql",
+      name: "首页总览指标",
+      desc: "用于生成 summary_kpi 页的一行总览数据，包含成交总额、有效订单量、客单价、买家数、终态失败率与平均配送天数。",
+    },
+    {
+      id: "sql-12",
+      file: "12_monthly_business_trend.sql",
+      name: "月度经营趋势",
+      desc: "用于生成月度趋势页数据，按月份输出成交总额、有效订单量与客单价。",
+    },
+    {
+      id: "sql-13",
+      file: "13_state_performance.sql",
+      name: "州维度表现",
+      desc: "用于生成州表现页数据，综合输出客户州的成交、订单、客单价、终态失败率与配送时长。",
+    },
+    {
+      id: "sql-14",
+      file: "14_payment_type_analysis.sql",
+      name: "支付方式分析",
+      desc: "用于生成支付方式页数据，比较不同支付方式下的订单量、成交总额与客单价。",
+    },
+    {
+      id: "sql-15",
+      file: "15_installment_analysis.sql",
+      name: "分期结构分析",
+      desc: "用于生成分期分析页数据，比较不同信用卡分期档位下的订单数与平均订单金额。",
+    },
   ];
 
   const sqlHighlights = [
@@ -317,15 +357,21 @@ order by installment_group;`,
                 <div className="mt-4 space-y-4 text-sm text-slate-700">
                   <div className="rounded-2xl bg-slate-100 p-4">
                     <div className="font-semibold">当前项目</div>
-                    <div className="mt-1 text-slate-600">Olist 电商经营分析，围绕总览 KPI、月度趋势、地区表现、支付方式与分期行为展开。</div>
+                    <div className="mt-1 text-slate-600">
+                      Olist 电商经营分析，围绕总览 KPI、月度趋势、地区表现、支付方式与分期行为展开。
+                    </div>
                   </div>
                   <div className="rounded-2xl bg-slate-100 p-4">
                     <div className="font-semibold">技术栈</div>
-                    <div className="mt-1 text-slate-600">SQL（MySQL）、Python（Pandas、Matplotlib）、Power BI、GitHub、Markdown。</div>
+                    <div className="mt-1 text-slate-600">
+                      SQL（MySQL）、Python（Pandas、Matplotlib）、Power BI、GitHub、Markdown。
+                    </div>
                   </div>
                   <div className="rounded-2xl bg-slate-100 p-4">
                     <div className="font-semibold">作品集方向</div>
-                    <div className="mt-1 text-slate-600">以数据分析岗位为导向，持续补充更多经营分析、转化分析与 BI 可视化项目。</div>
+                    <div className="mt-1 text-slate-600">
+                      以数据分析岗位为导向，持续补充更多经营分析、转化分析与 BI 可视化项目。
+                    </div>
                   </div>
                 </div>
               </div>
@@ -401,7 +447,9 @@ order by installment_group;`,
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">dashboard</p>
                 <h2 className="mt-2 text-2xl font-bold">Power BI 仪表板展示</h2>
               </div>
-              <a href="#top" className="text-sm text-slate-500 transition hover:text-slate-900">返回顶部</a>
+              <a href="#top" className="text-sm text-slate-500 transition hover:text-slate-900">
+                返回顶部
+              </a>
             </div>
 
             <div className="grid gap-6 md:grid-cols-2">
@@ -452,7 +500,9 @@ order by installment_group;`,
                   理清订单表、支付表和客户表之间的关联关系，保证 SQL 提取结果与 Power BI 展示口径保持一致。
                 </div>
                 <div className="rounded-2xl bg-slate-100 p-4">
-                  区分 <code className="rounded bg-white px-1 py-0.5 text-xs">customer_id</code> 与 <code className="rounded bg-white px-1 py-0.5 text-xs">customer_unique_id</code> 的业务含义，避免把订单级客户键误用为真实用户级标识。
+                  区分 <code className="rounded bg-white px-1 py-0.5 text-xs">customer_id</code> 与{" "}
+                  <code className="rounded bg-white px-1 py-0.5 text-xs">customer_unique_id</code>{" "}
+                  的业务含义，避免把订单级客户键误用为真实用户级标识。
                 </div>
                 <div className="rounded-2xl bg-slate-100 p-4">
                   在配送时长分析中识别极端偏长订单，并结合业务语境决定是否保留，从而兼顾数据真实性与分析解释性。
@@ -506,13 +556,21 @@ order by installment_group;`,
 
             <div className="space-y-4">
               {sqlDirectory.map((item) => (
-                <div key={item.id} id={item.id} className="rounded-2xl border border-dashed border-slate-200 bg-slate-50 px-5 py-4">
+                <div
+                  key={item.id}
+                  id={item.id}
+                  className="rounded-2xl border border-dashed border-slate-200 bg-slate-50 px-5 py-4"
+                >
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                     <div>
                       <div className="text-sm font-semibold text-slate-900">{item.name}</div>
-                      <div className="mt-1 text-sm text-slate-600">{item.file} · {item.desc}</div>
+                      <div className="mt-1 text-sm text-slate-600">
+                        {item.file} · {item.desc}
+                      </div>
                     </div>
-                    <a href="#top" className="text-sm text-slate-500 transition hover:text-slate-900">返回顶部</a>
+                    <a href="#top" className="text-sm text-slate-500 transition hover:text-slate-900">
+                      返回顶部
+                    </a>
                   </div>
                 </div>
               ))}
@@ -520,13 +578,19 @@ order by installment_group;`,
 
             <div className="mt-6 space-y-6">
               {sqlHighlights.map((block) => (
-                <div id={`code-${block.id}`} key={block.title} className="rounded-3xl border border-slate-200 p-6 shadow-sm">
+                <div
+                  id={`code-${block.id}`}
+                  key={block.title}
+                  className="rounded-3xl border border-slate-200 p-6 shadow-sm"
+                >
                   <div className="flex flex-wrap items-center justify-between gap-3">
                     <div>
                       <h3 className="text-lg font-bold">{block.title}</h3>
                       <p className="mt-2 text-sm text-slate-600">{block.description}</p>
                     </div>
-                    <div className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">{block.file}</div>
+                    <div className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">
+                      {block.file}
+                    </div>
                   </div>
                   <pre className="mt-5 overflow-x-auto rounded-2xl bg-slate-950 p-5 text-xs leading-6 text-slate-100">
                     <code>{block.code}</code>
@@ -538,7 +602,7 @@ order by installment_group;`,
         </section>
 
         <section className="mx-auto max-w-6xl px-6 py-14">
-          <div className="grid gap-6 lg:grid-cols-[1fr_0.95fr]">
+          <div className="grid gap-6">
             <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">business suggestion</p>
               <h2 className="mt-2 text-2xl font-bold">业务建议</h2>
@@ -551,22 +615,6 @@ order by installment_group;`,
                 </div>
                 <div className="rounded-2xl bg-slate-100 p-4">
                   针对信用卡主导的支付结构，可结合支付转化率、手续费成本与异常支付特征评估优化空间；针对分期客群，可继续结合订单金额与地区差异做更细分层。
-                </div>
-              </div>
-            </div>
-
-            <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">resume usage</p>
-              <h2 className="mt-2 text-2xl font-bold">简历使用建议</h2>
-              <div className="mt-6 space-y-4 text-sm leading-7 text-slate-700">
-                <div className="rounded-2xl bg-slate-100 p-4">
-                  简历中建议同时放置两个链接：一个是 GitHub 仓库链接，用于展示完整代码与 README；另一个是项目展示页链接，用于快速呈现图表、结论和业务建议。
-                </div>
-                <div className="rounded-2xl bg-slate-100 p-4">
-                  如果后续使用 Vercel、GitHub Pages 或 Netlify 部署该页面，可直接将部署后的公开网址放在项目经历下方，配合 GitHub 链接形成“展示页 + 代码仓库”双入口。
-                </div>
-                <div className="rounded-2xl bg-slate-100 p-4">
-                  面试讲解时可按“业务背景 → KPI 总览 → 趋势分析 → 地区差异 → 支付结构 → 业务建议”的顺序展开，减少叙述跳跃感。
                 </div>
               </div>
             </div>
