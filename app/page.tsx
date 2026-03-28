@@ -330,24 +330,24 @@ order by installment_group;`,
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <a
+                    href="#dashboard"
+                    className="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:opacity-90"
+                  >
+                    项目展示
+                  </a>
+                  <a
                     href="https://github.com/wnt0801/olist-ecommerce-analysis"
                     target="_blank"
                     rel="noreferrer"
-                    className="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:opacity-90"
-                  >
-                    查看 GitHub 仓库
-                  </a>
-                  <a
-                    href="#dashboard"
                     className="rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100"
                   >
-                    查看 Power BI 展示
+                    GitHub
                   </a>
                   <a
                     href="#sql-directory"
                     className="rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100"
                   >
-                    查看 SQL 模块
+                    SQL 分析
                   </a>
                 </div>
               </div>
@@ -368,9 +368,9 @@ order by installment_group;`,
                     </div>
                   </div>
                   <div className="rounded-2xl bg-slate-100 p-4">
-                    <div className="font-semibold">作品集方向</div>
+                    <div className="font-semibold">分析重点</div>
                     <div className="mt-1 text-slate-600">
-                      以数据分析岗位为导向，持续补充更多经营分析、转化分析与 BI 可视化项目。
+                      经营分析、指标拆解、区域差异、支付结构与可视化表达。
                     </div>
                   </div>
                 </div>
@@ -424,7 +424,7 @@ order by installment_group;`,
                   本项目围绕销售总览、月度趋势、地区表现、支付方式和分期行为展开分析，重点回答平台交易规模、区域差异、支付结构与履约效率几个核心问题。
                 </p>
                 <p>
-                  在实现路径上，先用 SQL 完成数据审计、指标提取与维度分析，再使用 Python 与 Power BI 做可视化展示，最后整理为可用于 GitHub 展示、简历补充与面试讲解的项目作品。
+                  在实现路径上，先用 SQL 完成数据审计、指标提取与维度分析，再使用 Python 与 Power BI 做可视化展示，最后整理为可用于 GitHub 展示。
                 </p>
                 <div className="rounded-2xl bg-slate-100 p-4">
                   <div className="font-semibold">项目结构</div>
@@ -478,6 +478,29 @@ order by installment_group;`,
         </section>
 
         <section className="mx-auto max-w-6xl px-6 py-14">
+          <div className="grid gap-6">
+            <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">business suggestion</p>
+              <h2 className="mt-2 text-2xl font-bold">业务建议</h2>
+              <div className="mt-6 space-y-4 text-sm leading-7 text-slate-700">
+                <div className="rounded-2xl bg-slate-100 p-4">
+                  <span className="font-semibold">优先监控核心贡献州：</span>
+                  围绕 SP、RJ、MG 三个核心州建立周度经营看板，重点跟踪成交总额、有效订单量、终态失败率与平均配送天数。因为这几个州体量最高，对整体 GMV 波动影响最大，适合作为区域经营监控的第一优先级。
+                </div>
+                <div className="rounded-2xl bg-slate-100 p-4">
+                  <span className="font-semibold">排查高客单价州的履约体验：</span>
+                  针对 PA、PB、AL 等订单量较低但客单价偏高的州，继续排查物流时效、取消情况与配送体验问题。这类区域虽然体量不大，但单笔价值更高，履约质量会更直接影响高价值订单表现。
+                </div>
+                <div className="rounded-2xl bg-slate-100 p-4">
+                  <span className="font-semibold">细分信用卡分期客群：</span>
+                  以信用卡用户为重点对象，区分单期、低分期与中高分期用户，并继续结合地区与商品结构识别高价值客群。因为分期数越高，平均订单金额越高，说明中高分期用户更可能对应高金额消费场景。
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-6xl px-6 py-14">
           <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">metrics</p>
@@ -523,7 +546,7 @@ order by installment_group;`,
                 <h2 className="mt-2 text-2xl font-bold">SQL 模块目录</h2>
               </div>
               <p className="max-w-2xl text-sm leading-6 text-slate-600">
-                这里按 GitHub 中的实际 SQL 文件拆分展示用途与入口。目录卡片可直接跳转到下方对应代码块，网页负责说明阅读路径，完整代码建议继续放在 GitHub 仓库中。
+                这里按 GitHub 中的实际 SQL 文件拆分展示用途与入口。目录卡片可直接跳转到下方对应代码块，网页负责说明阅读路径，完整代码放在 GitHub 仓库中，感兴趣读者可自行前往。
               </p>
             </div>
 
@@ -601,26 +624,6 @@ order by installment_group;`,
           </div>
         </section>
 
-        <section className="mx-auto max-w-6xl px-6 py-14">
-          <div className="grid gap-6">
-            <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">business suggestion</p>
-              <h2 className="mt-2 text-2xl font-bold">业务建议</h2>
-              <div className="mt-6 space-y-4 text-sm leading-7 text-slate-700">
-                <div className="rounded-2xl bg-slate-100 p-4">
-                  针对 SP、RJ、MG 等核心贡献州，优先建立成交总额、订单量、终态失败率和配送天数的联动监控机制，因为核心州的小幅波动会显著影响整体盘面表现。
-                </div>
-                <div className="rounded-2xl bg-slate-100 p-4">
-                  对于以订单规模驱动的核心州，应重点关注履约稳定性与商家服务质量；对于客单价较高但配送天数偏长的州，可进一步排查物流效率与履约体验问题。
-                </div>
-                <div className="rounded-2xl bg-slate-100 p-4">
-                  针对信用卡主导的支付结构，可结合支付转化率、手续费成本与异常支付特征评估优化空间；针对分期客群，可继续结合订单金额与地区差异做更细分层。
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section id="project-value" className="mx-auto max-w-6xl px-6 py-14">
           <div className="rounded-[28px] border border-slate-200 bg-slate-900 px-8 py-10 text-white shadow-sm">
             <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
@@ -652,6 +655,25 @@ order by installment_group;`,
             </div>
           </div>
         </section>
+
+        <footer className="border-t border-slate-200 bg-white">
+          <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+            <div>© 2026 Wan Nantian</div>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="https://github.com/wnt0801/olist-ecommerce-analysis"
+                target="_blank"
+                rel="noreferrer"
+                className="transition hover:text-slate-900"
+              >
+                GitHub
+              </a>
+              <a href="#top" className="transition hover:text-slate-900">
+                Back to top
+              </a>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   );
