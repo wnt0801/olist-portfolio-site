@@ -29,7 +29,6 @@ export default function HomePage() {
         "高金额 + Voucher 的组合放大效应在控制变量后仍显著",
       ],
       github: "https://github.com/wnt0801/olist-cancellation-risk-analysis",
-      cover: null,
       cover: "/images/odds_ratio.png",
     },
     {
