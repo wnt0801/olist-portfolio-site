@@ -5,7 +5,7 @@ import "./globals.css";
 const SITE_URL = "https://www.wannantian.com";
 const SITE_NAME = "万南天 · 数据分析作品集";
 const SITE_DESCRIPTION =
-  "金融工程专业学生，聚焦业务数据分析方向。围绕 SQL、Python 与 Power BI 打造的项目作品集，包含 Olist 电商经营分析、取消风险逻辑回归建模、A 股行业轮动量化研究三个完整项目。";
+  "万南天 · 金融工程专业学生，聚焦业务数据分析方向。围绕 SQL、Python 与 Power BI 打造的求职作品集，包含 Olist 电商经营 8 模块 SQL 分析、78,126 条订单的逻辑回归取消风险建模、A 股 27 个行业 4 年轮动规律量化研究三个完整项目，含完整代码与可视化。";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
