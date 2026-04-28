@@ -73,6 +73,13 @@ export default function HomePage() {
     },
   ];
 
+  // 注意:JSX 里直接写"," 中间会被解析坑,所以中文逗号通过常量注入
+  const C = "，";
+  const COLON = "：";
+
+  // 把上面字符串里的英文 , 和 : 替换成中文
+  const fix = (s: string) => s.replace(/,/g, C).replace(/:/g, COLON);
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
       <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/90 backdrop-blur">
@@ -91,8 +98,8 @@ export default function HomePage() {
           <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
             <div className="mb-4 inline-flex rounded-full border border-slate-200 bg-slate-100 px-3 py-1 text-sm text-slate-600">data analyst portfolio</div>
             <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">万南天<span className="block sm:inline sm:ml-3">· 数据分析作品集</span></h1>
-            <p className="mt-5 max-w-3xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">金融工程专业学生,聚焦业务数据分析方向。围绕 SQL、Python 与 Power BI,持续打磨从业务问题拆解、指标口径定义到可视化表达的完整分析能力。</p>
-            <p className="mt-4 max-w-3xl text-sm leading-6 text-slate-500 sm:text-base sm:leading-7">当前共 3 个项目:1 个完整经营分析、1 个延伸建模分析、1 个量化方向的学习项目。</p>
+            <p className="mt-5 max-w-3xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">金融工程专业学生，聚焦业务数据分析方向。围绕 SQL、Python 与 Power BI，持续打磨从业务问题拆解、指标口径定义到可视化表达的完整分析能力。</p>
+            <p className="mt-4 max-w-3xl text-sm leading-6 text-slate-500 sm:text-base sm:leading-7">当前共 3 个项目：1 个完整经营分析、1 个延伸建模分析、1 个量化方向的学习项目。</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#projects" className="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:opacity-90">查看项目</a>
               <a href="https://github.com/wnt0801" target="_blank" rel="noreferrer" className="rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100">GitHub 主页</a>
@@ -104,7 +111,7 @@ export default function HomePage() {
           <div className="mb-10">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">projects</p>
             <h2 className="mt-2 text-2xl font-bold">项目作品</h2>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">三个项目按业务分析、建模延伸、量化探索的顺序排列。点击进入对应详情页,含完整结论、方法与代码片段。</p>
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">三个项目按业务分析、建模延伸、量化探索的顺序排列。点击进入对应详情页，含完整结论、方法与代码片段。</p>
           </div>
 
           <div className="space-y-6">
@@ -124,7 +131,7 @@ export default function HomePage() {
 
                     <ul className="mt-5 space-y-2 text-sm leading-6 text-slate-600">
                       {p.highlights.map((h, i) => (
-                        <li key={i} className="flex gap-2"><span className="mt-2 inline-block h-1 w-1 shrink-0 rounded-full bg-slate-400" /><span>{h}</span></li>
+                        <li key={i} className="flex gap-2"><span className="mt-2 inline-block h-1 w-1 shrink-0 rounded-full bg-slate-400" /><span>{fix(h)}</span></li>
                       ))}
                     </ul>
 
@@ -148,7 +155,7 @@ export default function HomePage() {
                   {p.cover ? (
                     <img src={p.cover} alt={p.coverAlt} className="w-full rounded-2xl border border-slate-200 bg-slate-50" />
                   ) : (
-                    <div className="flex h-56 items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-slate-50 text-sm text-slate-400">{p.coverAlt}(待补封面图)</div>
+                    <div className="flex h-56 items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-slate-50 text-sm text-slate-400">{p.coverAlt}（待补封面图）</div>
                   )}
                 </div>
               </div>
@@ -162,8 +169,8 @@ export default function HomePage() {
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">about</p>
                 <h2 className="mt-2 text-2xl font-bold">关于我</h2>
-                <p className="mt-5 text-sm leading-7 text-slate-600">金融工程专业大二在读。求职方向为业务数据分析,对电商、金融场景下的指标拆解、用户分群与因果验证最感兴趣。目前持续通过项目打磨 SQL 与 Python 的分析能力,并尝试把描述性分析延伸到建模验证。</p>
-                <p className="mt-4 text-sm leading-7 text-slate-600">作品集中所有项目均已开源。如对项目细节、SQL 写法或建模思路有兴趣,欢迎前往 GitHub 直接查看完整代码。</p>
+                <p className="mt-5 text-sm leading-7 text-slate-600">金融工程专业大二在读。求职方向为业务数据分析，对电商、金融场景下的指标拆解、用户分群与因果验证最感兴趣。目前持续通过项目打磨 SQL 与 Python 的分析能力，并尝试把描述性分析延伸到建模验证。</p>
+                <p className="mt-4 text-sm leading-7 text-slate-600">作品集中所有项目均已开源。如对项目细节、SQL 写法或建模思路有兴趣，欢迎前往 GitHub 直接查看完整代码。</p>
               </div>
 
               <div className="rounded-3xl border border-slate-200 bg-slate-50 p-7">
@@ -171,11 +178,11 @@ export default function HomePage() {
                 <div className="mt-4 grid gap-4 text-sm text-slate-600">
                   <div>
                     <div className="font-medium text-slate-700">数据提取</div>
-                    <div className="mt-1">SQL(MySQL)、CTE、窗口函数、多表 JOIN</div>
+                    <div className="mt-1">SQL（MySQL）、CTE、窗口函数、多表 JOIN</div>
                   </div>
                   <div>
                     <div className="font-medium text-slate-700">分析与建模</div>
-                    <div className="mt-1">Python、Pandas、scikit-learn(Logistic Regression)</div>
+                    <div className="mt-1">Python、Pandas、scikit-learn（Logistic Regression）</div>
                   </div>
                   <div>
                     <div className="font-medium text-slate-700">可视化</div>
