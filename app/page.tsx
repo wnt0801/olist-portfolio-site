@@ -73,11 +73,8 @@ export default function HomePage() {
     },
   ];
 
-  // 注意:JSX 里直接写"," 中间会被解析坑,所以中文逗号通过常量注入
   const C = "，";
   const COLON = "：";
-
-  // 把上面字符串里的英文 , 和 : 替换成中文
   const fix = (s: string) => s.replace(/,/g, C).replace(/:/g, COLON);
 
   return (
@@ -88,6 +85,7 @@ export default function HomePage() {
           <nav className="hidden flex-wrap gap-5 md:flex">
             <a href="#projects" className="text-sm text-slate-600 transition hover:text-slate-900">项目作品</a>
             <a href="#about" className="text-sm text-slate-600 transition hover:text-slate-900">关于我</a>
+            <a href="#contact" className="text-sm text-slate-600 transition hover:text-slate-900">联系方式</a>
             <a href="https://github.com/wnt0801" target="_blank" rel="noreferrer" className="text-sm text-slate-600 transition hover:text-slate-900">GitHub</a>
           </nav>
         </div>
@@ -102,6 +100,7 @@ export default function HomePage() {
             <p className="mt-4 max-w-3xl text-sm leading-6 text-slate-500 sm:text-base sm:leading-7">当前共 3 个项目：1 个完整经营分析、1 个延伸建模分析、1 个量化方向的学习项目。</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#projects" className="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:opacity-90">查看项目</a>
+              <a href="/resume.pdf" download className="rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100">下载简历 PDF</a>
               <a href="https://github.com/wnt0801" target="_blank" rel="noreferrer" className="rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100">GitHub 主页</a>
             </div>
           </div>
@@ -198,11 +197,63 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section id="contact" className="border-t bg-slate-900 text-white">
+          <div className="mx-auto max-w-6xl px-6 py-16">
+            <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">contact</p>
+                <h2 className="mt-2 text-3xl font-bold sm:text-4xl">寻找业务数据分析实习机会</h2>
+                <p className="mt-5 text-base leading-8 text-slate-300">2028 届金融工程在读，求职方向业务数据分析。互联网、金融科技皆可，一线城市优先。暑期（6–9 月）可全勤到岗，学期内可工作日远程协作。</p>
+                <p className="mt-3 text-sm leading-7 text-slate-400">如对作品集中任一项目感兴趣，或有合适的实习机会，欢迎通过下方任一方式联系。</p>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <a href="/resume.pdf" download className="rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100">📄 下载简历 PDF</a>
+                  <a href="mailto:18179136406@163.com" className="rounded-2xl border border-slate-600 bg-slate-800 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700">✉️ 发送邮件</a>
+                </div>
+              </div>
+
+              <div className="rounded-3xl border border-slate-700 bg-slate-800 p-7">
+                <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">联系方式</div>
+                <div className="mt-5 space-y-4">
+                  <div className="flex items-start gap-3 rounded-2xl bg-slate-900 p-4">
+                    <div className="text-lg">📧</div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-xs text-slate-400">邮箱</div>
+                      <a href="mailto:18179136406@163.com" className="mt-1 block break-all text-sm font-medium text-white transition hover:text-slate-300">18179136406@163.com</a>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 rounded-2xl bg-slate-900 p-4">
+                    <div className="text-lg">💬</div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-xs text-slate-400">微信</div>
+                      <div className="mt-1 text-sm font-medium text-white">wnt0801</div>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 rounded-2xl bg-slate-900 p-4">
+                    <div className="text-lg">📞</div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-xs text-slate-400">电话</div>
+                      <a href="tel:18179136406" className="mt-1 block text-sm font-medium text-white transition hover:text-slate-300">181-7913-6406</a>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 rounded-2xl bg-slate-900 p-4">
+                    <div className="text-lg">💻</div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-xs text-slate-400">GitHub</div>
+                      <a href="https://github.com/wnt0801" target="_blank" rel="noreferrer" className="mt-1 block text-sm font-medium text-white transition hover:text-slate-300">github.com/wnt0801</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <footer className="border-t border-slate-200 bg-white">
           <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
             <div>© 2026 Wan Nantian</div>
             <div className="flex flex-wrap gap-4">
               <a href="https://github.com/wnt0801" target="_blank" rel="noreferrer" className="transition hover:text-slate-900">GitHub</a>
+              <a href="mailto:18179136406@163.com" className="transition hover:text-slate-900">Email</a>
               <a href="#top" className="transition hover:text-slate-900">Back to top</a>
             </div>
           </div>
