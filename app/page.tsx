@@ -100,7 +100,7 @@ export default function HomePage() {
             <p className="mt-4 max-w-3xl text-sm leading-6 text-slate-500 sm:text-base sm:leading-7">当前共 3 个项目：1 个完整经营分析、1 个延伸建模分析、1 个量化方向的学习项目。</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#projects" className="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:opacity-90">查看项目</a>
-              <a href="/resume.pdf" download className="rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100">下载简历 PDF</a>
+              <a href="/resume.pdf" download="万南天_数据分析实习简历.pdf" className="rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100">下载简历 PDF</a>
               <a href="https://github.com/wnt0801" target="_blank" rel="noreferrer" className="rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100">GitHub 主页</a>
             </div>
           </div>
@@ -206,7 +206,7 @@ export default function HomePage() {
                 <p className="mt-5 text-base leading-8 text-slate-300">2028 届金融工程在读，求职方向业务数据分析。互联网、金融科技皆可，一线城市优先。暑期（6–9 月）可全勤到岗，学期内可工作日远程协作。</p>
                 <p className="mt-3 text-sm leading-7 text-slate-400">如对作品集中任一项目感兴趣，或有合适的实习机会，欢迎通过下方任一方式联系。</p>
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <a href="/resume.pdf" download className="rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100">📄 下载简历 PDF</a>
+                  <a href="/resume.pdf" download="万南天_数据分析实习简历.pdf" className="rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100">📄 下载简历 PDF</a>
                   <a href="mailto:18179136406@163.com" className="rounded-2xl border border-slate-600 bg-slate-800 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700">✉️ 发送邮件</a>
                 </div>
               </div>
