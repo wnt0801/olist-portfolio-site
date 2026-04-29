@@ -22,8 +22,8 @@ export default function HomePage() {
         { value: "1.26%", label: "失败率" },
       ],
       github: "https://github.com/wnt0801/olist-ecommerce-analysis",
-      cover: "/images/state_analysis.png",
-      coverAlt: "各州成交 Top 10",
+      cover: "/images/monthly_trend.png",
+      coverAlt: "月度成交额与订单量",
     },
     {
       slug: "olist-cancellation",
