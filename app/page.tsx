@@ -4,72 +4,49 @@ export default function HomePage() {
   const projects = [
     {
       slug: "olist",
-      title: "Olist 电商经营分析",
-      tagline: "从总览 KPI 到地区、支付、分期的全链路经营分析",
-      stack: ["SQL", "Power BI", "Python"],
-      role: "主项目 · 业务分析与可视化",
+      title: "Olist 电商分析",
+      tagline: "全链路经营分析 + 取消风险建模，从 SQL 数据提取到 Logit 交互效应验证的完整分析链路",
+      stack: ["SQL", "Python", "Power BI", "statsmodels"],
+      role: "主项目 · 经营分析 + 因果建模",
       highlights: [
-        "GMV 1542 万,9.6 万订单,覆盖 27 个州的经营画像",
-        "8 个 SQL 模块 + 6 个 KPI + 6 张 Power BI 仪表板",
-        "区分 customer_id 与 customer_unique_id 等口径细节",
+        "GMV 1542 万，9.6 万订单，8 个 SQL 模块 + 6 张 Power BI 仪表板",
+        "78,126 条建模样本，三层证据链：Fisher OR=31.55 / Voucher OR=1.39 / 交互项 OR=1.09",
+        "从描述性发现出发，逻辑回归控制混淆变量，交互项验证组合放大效应",
       ],
       kpis: [
-        { value: "9.6 万", label: "订单数" },
-        { value: "9.3 万", label: "买家数" },
         { value: "1542 万", label: "GMV" },
-        { value: "159.86", label: "客单价" },
-        { value: "12.50", label: "配送天数" },
-        { value: "1.26%", label: "失败率" },
+        { value: "9.6 万", label: "订单数" },
+        { value: "78,126", label: "建模样本" },
+        { value: "31.55", label: "Fisher OR" },
+        { value: "1.39", label: "Voucher OR" },
+        { value: "1.09", label: "交互项 OR" },
       ],
       github: "https://github.com/wnt0801/olist-ecommerce-analysis",
       cover: "/images/monthly_trend.png",
       coverAlt: "月度成交额与订单量",
     },
     {
-      slug: "olist-cancellation",
-      title: "Olist 取消风险建模",
-      tagline: "从描述性发现 到 逻辑回归验证支付方式与金额的交互效应",
-      stack: ["SQL", "scikit-learn", "Python"],
-      role: "延伸建模 · 描述统计 到 因果验证",
+      slug: "cookie-cats",
+      title: "Cookie Cats A/B 测试分析",
+      tagline: "9 万用户行为数据，频率派 + 贝叶斯双框架评估付费门位置对 7 日留存率的影响",
+      stack: ["Python", "scipy", "Beta-Binomial"],
+      role: "实验分析 · 双框架检验",
       highlights: [
-        "78,126 条订单,逻辑回归 + 交互项,处理 149:1 类不平衡",
-        "Voucher OR=1.39,金额 OR=1.15,交互项 OR=1.09",
-        "高金额 + Voucher 的组合放大效应在控制变量后仍显著",
+        "90,189 用户，gate_30 vs gate_40 两组，含 SRM 分流合理性验证",
+        "7 日留存频率派 p=0.0016，贝叶斯 P(gate_30 > gate_40)=99.92%，双框架结论一致",
+        "效应量解释：行业 7 日留存基准约 15-18%，1% 量级提升具有业务意义",
       ],
       kpis: [
-        { value: "78,126", label: "样本量" },
-        { value: "149:1", label: "类不平衡" },
-        { value: "31.55", label: "Fisher OR" },
-        { value: "1.39", label: "Voucher OR" },
-        { value: "1.15", label: "金额 OR" },
-        { value: "1.09", label: "交互项 OR" },
+        { value: "9 万", label: "用户数" },
+        { value: "2 组", label: "实验分组" },
+        { value: "0.0016", label: "7日留存 p值" },
+        { value: "99.92%", label: "贝叶斯概率" },
+        { value: "双框架", label: "频率派+贝叶斯" },
+        { value: "不上线", label: "建议结论" },
       ],
-      github: "https://github.com/wnt0801/olist-cancellation-risk-analysis",
-      cover: "/images/odds_ratio.png",
-      coverAlt: "Odds Ratio 可视化",
-    },
-    {
-      slug: "a-stock",
-      title: "A 股申万行业轮动规律",
-      tagline: "27 个行业 × 4 年数据,量化不同市场环境下的超额收益结构",
-      stack: ["AkShare", "Pandas", "Seaborn"],
-      role: "学习项目 · 量化分析入门",
-      highlights: [
-        "申万一级 27 个行业,2021-2024 共 938 个交易日",
-        "上涨期 / 震荡期 / 下跌期分类,胜率 + 超额收益双指标",
-        "反常识发现:消费类下跌期表现并不优于市场",
-      ],
-      kpis: [
-        { value: "27", label: "行业数" },
-        { value: "938", label: "交易日" },
-        { value: "4 年", label: "时间窗口" },
-        { value: "95", label: "上涨期" },
-        { value: "709", label: "震荡期" },
-        { value: "134", label: "下跌期" },
-      ],
-      github: "https://github.com/wnt0801/a-stock-industry-rotation",
-      cover: "/images/heatmap_winrate.png",
-      coverAlt: "超额收益热力图",
+      github: "https://github.com/wnt0801/cookie-cats-ab-test",
+      cover: "/images/cookie_cats_retention.png",
+      coverAlt: "7 日留存率对比",
     },
   ];
 
@@ -97,7 +74,7 @@ export default function HomePage() {
             <div className="mb-4 inline-flex rounded-full border border-slate-200 bg-slate-100 px-3 py-1 text-sm text-slate-600">data analyst portfolio</div>
             <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">万南天<span className="block sm:inline sm:ml-3">· 数据分析作品集</span></h1>
             <p className="mt-5 max-w-3xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">金融工程专业学生，聚焦业务数据分析方向。围绕 SQL、Python 与 Power BI，持续打磨从业务问题拆解、指标口径定义到可视化表达的完整分析能力。</p>
-            <p className="mt-4 max-w-3xl text-sm leading-6 text-slate-500 sm:text-base sm:leading-7">当前共 3 个项目：1 个完整经营分析、1 个延伸建模分析、1 个量化方向的学习项目。</p>
+            <p className="mt-4 max-w-3xl text-sm leading-6 text-slate-500 sm:text-base sm:leading-7">当前共 2 个项目：1 个覆盖经营分析与风险建模的完整项目、1 个 A/B 实验分析项目。</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#projects" className="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:opacity-90">查看项目</a>
               <a href="/resume.pdf" download="万南天_数据分析实习简历.pdf" className="rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100">下载简历 PDF</a>
@@ -110,7 +87,7 @@ export default function HomePage() {
           <div className="mb-10">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">projects</p>
             <h2 className="mt-2 text-2xl font-bold">项目作品</h2>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">三个项目按业务分析、建模延伸、量化探索的顺序排列。点击进入对应详情页，含完整结论、方法与代码片段。</p>
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">两个项目分别覆盖业务经营分析 + 因果建模、实验设计与双框架检验。点击进入详情页，含完整结论、方法与代码片段。</p>
           </div>
 
           <div className="space-y-6">
@@ -181,15 +158,15 @@ export default function HomePage() {
                   </div>
                   <div>
                     <div className="font-medium text-slate-700">分析与建模</div>
-                    <div className="mt-1">Python、Pandas、scikit-learn（Logistic Regression）</div>
+                    <div className="mt-1">Python、Pandas、statsmodels（Logit）、scipy（z-test、Fisher）</div>
+                  </div>
+                  <div>
+                    <div className="font-medium text-slate-700">实验分析</div>
+                    <div className="mt-1">A/B 测试、频率派检验、贝叶斯推断（Beta-Binomial）</div>
                   </div>
                   <div>
                     <div className="font-medium text-slate-700">可视化</div>
                     <div className="mt-1">Power BI、Matplotlib、Seaborn</div>
-                  </div>
-                  <div>
-                    <div className="font-medium text-slate-700">数据来源</div>
-                    <div className="mt-1">Kaggle 公开数据集、AkShare 金融数据接口</div>
                   </div>
                 </div>
               </div>
@@ -203,7 +180,7 @@ export default function HomePage() {
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">contact</p>
                 <h2 className="mt-2 text-3xl font-bold sm:text-4xl">寻找业务数据分析实习机会</h2>
-                <p className="mt-5 text-base leading-8 text-slate-300">2028 届金融工程在读，求职方向业务数据分析。互联网、金融科技皆可，一线城市优先。暑期（6–9 月）可全勤到岗，学期内可工作日远程协作。</p>
+                <p className="mt-5 text-base leading-8 text-slate-300">2028 届金融工程在读，求职方向业务数据分析。行业不限，一线城市优先。暑期（6–9 月）可全勤到岗，学期内可工作日远程协作。</p>
                 <p className="mt-3 text-sm leading-7 text-slate-400">如对作品集中任一项目感兴趣，或有合适的实习机会，欢迎通过下方任一方式联系。</p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <a href="/resume.pdf" download="万南天_数据分析实习简历.pdf" className="rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100">📄 下载简历 PDF</a>

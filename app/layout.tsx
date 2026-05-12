@@ -5,7 +5,7 @@ import "./globals.css";
 const SITE_URL = "https://www.wannantian.com";
 const SITE_NAME = "万南天 · 数据分析作品集";
 const SITE_DESCRIPTION =
-  "万南天 · 金融工程专业学生，聚焦业务数据分析方向。围绕 SQL、Python 与 Power BI 打造的求职作品集，包含 Olist 电商经营 8 模块 SQL 分析、78,126 条订单的逻辑回归取消风险建模、A 股 27 个行业 4 年轮动规律量化研究三个完整项目，含完整代码与可视化。";
+  "万南天 · 金融工程专业学生，聚焦业务数据分析方向。围绕 SQL、Python 与 Power BI 打造的求职作品集，包含 Olist 电商经营 8 模块 SQL 分析 + 78,126 条订单逻辑回归取消风险建模、Cookie Cats 手游 A/B 测试频率派与贝叶斯双框架分析两个完整项目，含完整代码与可视化。";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -25,7 +25,8 @@ export const metadata: Metadata = {
     "Power BI",
     "Olist",
     "逻辑回归",
-    "A 股行业轮动",
+    "A/B 测试",
+    "贝叶斯",
     "金融工程",
   ],
   authors: [{ name: "万南天 (Wan Nantian)", url: SITE_URL }],
@@ -56,8 +57,8 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: ["/og.png"],
   },
-   verification: {
-        google: "T2sTPaLx3tUBTWPv3uaHqkNAxKWgUKhLKX26_KpbHZE",
+  verification: {
+    google: "T2sTPaLx3tUBTWPv3uaHqkNAxKWgUKhLKX26_KpbHZE",
   },
   robots: {
     index: true,
@@ -84,7 +85,6 @@ export const viewport: Viewport = {
   themeColor: "#ffffff",
 };
 
-// 结构化数据：告诉搜索引擎"这是一个人 + 一份简历型作品集"
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -100,6 +100,8 @@ const jsonLd = {
     "数据分析",
     "业务数据分析",
     "逻辑回归",
+    "A/B 测试",
+    "贝叶斯推断",
     "金融工程",
   ],
   sameAs: [
