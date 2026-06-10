@@ -69,7 +69,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
             <div className="mb-4 inline-flex rounded-full border border-slate-200 bg-slate-100 px-3 py-1 text-sm text-slate-600">data analyst portfolio</div>
             <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">万南天<span className="block sm:inline sm:ml-3">· 数据分析作品集</span></h1>
-            <p className="mt-5 max-w-3xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">金融工程专业学生，聚焦业务数据分析方向。围绕 SQL、Python 与 Power BI，持续打磨从业务问题拆解、指标口径定义到可视化表达的完整分析能力。</p>
+            <p className="mt-5 max-w-3xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">金融工程专业学生，聚焦业务数据分析。习惯从一个数字异常出发——voucher 支付取消率是信用卡的 25 倍，然后一路追到逻辑回归验证它不是混淆变量的假象。</p>
             <p className="mt-4 max-w-3xl text-sm leading-6 text-slate-500 sm:text-base sm:leading-7">当前共 2 个项目：1 个覆盖经营分析与风险建模的完整项目、1 个 A/B 实验分析项目。</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#projects" className="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:opacity-90">查看项目</a>
