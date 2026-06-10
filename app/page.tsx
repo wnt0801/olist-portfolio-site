@@ -21,6 +21,7 @@ export default function HomePage() {
         { value: "1.39", label: "Voucher OR" },
         { value: "1.09", label: "交互项 OR" },
       ],
+conclusion: "核心发现：高客单订单中 voucher 支付取消风险被显著放大，建议针对该组合优化支付引导策略。",
       github: "https://github.com/wnt0801/olist-ecommerce-analysis",
       cover: "/images/monthly_trend.png",
       coverAlt: "月度成交额与订单量",
@@ -44,6 +45,7 @@ export default function HomePage() {
         { value: "双框架", label: "频率派+贝叶斯" },
         { value: "不上线", label: "建议结论" },
       ],
+conclusion: "建议结论：维持 gate_30 方案，双框架一致支持，推迟付费门会显著损害 7 日留存。",
       github: "https://github.com/wnt0801/cookie-cats-ab-test",
       cover: "/images/cookie_cats_retention.png",
       coverAlt: "7 日留存率对比",
@@ -101,11 +103,14 @@ export default function HomePage() {
                       ))}
                     </div>
 
-                    <ul className="mt-5 space-y-2 text-sm leading-6 text-slate-600">
+<ul className="mt-5 space-y-2 text-sm leading-6 text-slate-600">
                       {p.highlights.map((h, i) => (
                         <li key={i} className="flex gap-2"><span className="mt-2 inline-block h-1 w-1 shrink-0 rounded-full bg-slate-400" /><span>{h}</span></li>
                       ))}
                     </ul>
+                    {p.conclusion && (
+                      <p className="mt-3 text-sm font-medium text-slate-700 border-l-2 border-slate-300 pl-3">{p.conclusion}</p>
+                    )}
 
                     {p.kpis && (
                       <div className="mt-5 grid grid-cols-3 gap-2 sm:grid-cols-6 sm:gap-3">
