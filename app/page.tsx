@@ -50,10 +50,6 @@ export default function HomePage() {
     },
   ];
 
-  const C = "，";
-  const COLON = "：";
-  const fix = (s: string) => s.replace(/,/g, C).replace(/:/g, COLON);
-
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
       <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/90 backdrop-blur">
@@ -107,7 +103,7 @@ export default function HomePage() {
 
                     <ul className="mt-5 space-y-2 text-sm leading-6 text-slate-600">
                       {p.highlights.map((h, i) => (
-                        <li key={i} className="flex gap-2"><span className="mt-2 inline-block h-1 w-1 shrink-0 rounded-full bg-slate-400" /><span>{fix(h)}</span></li>
+                        <li key={i} className="flex gap-2"><span className="mt-2 inline-block h-1 w-1 shrink-0 rounded-full bg-slate-400" /><span>{h}</span></li>
                       ))}
                     </ul>
 
@@ -206,16 +202,9 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div className="flex items-start gap-3 rounded-2xl bg-slate-900 p-4">
-                    <div className="text-lg">📞</div>
-                    <div className="flex-1 min-w-0">
-                      <div className="text-xs text-slate-400">电话</div>
-                      <a href="tel:18179136406" className="mt-1 block text-sm font-medium text-white transition hover:text-slate-300">181-7913-6406</a>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3 rounded-2xl bg-slate-900 p-4">
                     <div className="text-lg">💻</div>
                     <div className="flex-1 min-w-0">
-                      <div className="text-xs text-slate-400">GitHub</div>
+                      <div className="text-xs text-slate-400">GitHub</div>  
                       <a href="https://github.com/wnt0801" target="_blank" rel="noreferrer" className="mt-1 block text-sm font-medium text-white transition hover:text-slate-300">github.com/wnt0801</a>
                     </div>
                   </div>
