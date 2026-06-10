@@ -136,7 +136,7 @@ def call_api(profile, job_content, job_requirements, api_key):
                 <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">用工程手段解决自己的真实问题：Playwright 抓取职位数据，LLM 对照个人简历数据库逐条打分并给出投递建议，Streamlit 看板完成筛选与投递追踪。从 0 到可用产品单日完成。</p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <a href="#findings" className="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:opacity-90">查看设计决策</a>
-                  <a href="https://github.com/wnt0801" target="_blank" rel="noreferrer" className="rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100">GitHub</a>
+                  <a href="https://github.com/wnt0801/job-hunter" target="_blank" rel="noreferrer" className="rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100">GitHub</a>
                   <a href="#code-highlight" className="rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100">关键代码</a>
                 </div>
               </div>
@@ -295,7 +295,7 @@ def call_api(profile, job_content, job_requirements, api_key):
           <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
             <div>© 2026 Wan Nantian</div>
             <div className="flex flex-wrap gap-4">
-              <a href="https://github.com/wnt0801" target="_blank" rel="noreferrer" className="transition hover:text-slate-900">GitHub</a>
+              <a href="https://github.com/wnt0801/job-hunter" target="_blank" rel="noreferrer" className="transition hover:text-slate-900">GitHub</a>
               <a href="/public" className="transition hover:text-slate-900">回到作品集</a>
             </div>
           </div>
