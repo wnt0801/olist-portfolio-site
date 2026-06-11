@@ -10,9 +10,9 @@ export default function OlistProjectPortfolioPage() {
   ];
 
   const kpis = [
-    { label: "成交总额（GMV）", value: "1542 万", note: "15,422,461.77" },
+    { label: "成交总额（GMV）", value: "1542 万", note: "BRL 15,422,461.77" },
     { label: "有效订单量", value: "9.6 万", note: "96,477" },
-    { label: "平均客单价", value: "159.9", note: "元/单" },
+    { label: "平均客单价", value: "159.9", note: "BRL/单" },
     { label: "去重买家数", value: "9.3 万", note: "93,358" },
     { label: "终态失败率", value: "1.26%", note: "终态失败订单占比" },
     { label: "平均配送天数", value: "12.5 天", note: "下单到送达" },
@@ -46,7 +46,7 @@ export default function OlistProjectPortfolioPage() {
   ];
 
   const dashboardCards = [
-    { title: "KPI 总览页", text: "展示成交总额、有效订单量、平均客单价、去重买家数、终态失败率与平均配送天数，用于快速判断平台整体规模、订单质量与履约效率。当前首页指标显示：成交总额约 1542 万，终态失败率仅 1.26%，平均配送天数为 12.5 天。", badge: "summary_kpi", image: "/images/dashboard_overview.png" },
+    { title: "KPI 总览页", text: "展示成交总额、有效订单量、平均客单价、去重买家数、终态失败率与平均配送天数，用于快速判断平台整体规模、订单质量与履约效率。当前首页指标显示：成交总额约 R$ 1542 万，终态失败率仅 1.26%，平均配送天数为 12.5 天。", badge: "summary_kpi", image: "/images/dashboard_overview.png" },
     { title: "月度成交额与订单量", text: "按月展示成交总额与有效订单量变化，用于识别平台增长阶段与波动区间。结果显示 2017-11 为单月成交峰值，2018-03 至 2018-05 维持高位运行，说明后期交易规模趋于稳定。", badge: "monthly_trend", image: "/images/monthly_trend.png" },
     { title: "月度客单价趋势", text: "展示主业务阶段的月度客单价变化，用于观察订单质量与价格结构是否稳定，并辅助判断成交规模波动是由订单量还是单价主导。", badge: "monthly_aov", image: "/images/monthly_aov.png" },
     { title: "各州成交总额 Top 10", text: "展示成交总额排名前 10 的州，用于识别核心贡献地区与区域集中度。结合州维度表现可见，SP、RJ、MG 是最主要的交易贡献区域。", badge: "state_analysis", image: "/images/state_analysis.png" },
