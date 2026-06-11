@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 const SITE_URL = "https://www.wannantian.com";
 const SITE_NAME = "万南天 · 数据分析作品集";
@@ -118,6 +119,7 @@ export default function RootLayout({
     <html lang="zh-CN" className="h-full antialiased" style={{ colorScheme: "light" }}>
       <body className="min-h-full flex flex-col">
         {children}
+        <Analytics />
         <Script
           id="json-ld-person"
           type="application/ld+json"

@@ -1,3 +1,17 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Olist 电商分析",
+  description: "全链路经营分析 + 取消风险建模，从 SQL 数据提取到 Logit 交互效应验证的完整分析链路。GMV R$ 1542 万，9.6 万订单，78,126 条建模样本，Fisher OR=31.55 / Voucher OR=1.39 / 交互项 OR=1.09。",
+  alternates: {
+    canonical: "/projects/olist",
+  },
+  openGraph: {
+    title: "Olist 电商分析 | 万南天",
+    description: "全链路经营分析 + 取消风险建模，从 SQL 数据提取到 Logit 交互效应验证的完整分析链路。",
+    url: "/projects/olist",
+  },
+};
 export default function OlistProjectPortfolioPage() {
   const navItems = [
     { label: "项目概览", href: "#overview" },

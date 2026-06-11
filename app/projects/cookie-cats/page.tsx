@@ -1,3 +1,17 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cookie Cats A/B 测试分析",
+  description: "9 万用户行为数据，频率派 + 贝叶斯双框架评估付费门位置对 7 日留存率的影响。7 日留存频率派 p=0.0016，贝叶斯 P(gate_30 > gate_40)=99.92%，双框架结论一致。",
+  alternates: {
+    canonical: "/projects/cookie-cats",
+  },
+  openGraph: {
+    title: "Cookie Cats A/B 测试分析 | 万南天",
+    description: "9 万用户行为数据，频率派 + 贝叶斯双框架评估付费门位置对 7 日留存率的影响。",
+    url: "/projects/cookie-cats",
+  },
+};
 export default function CookieCatsPortfolioPage() {
   const navItems = [
     { label: "项目概览", href: "#overview" },

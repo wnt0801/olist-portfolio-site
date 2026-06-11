@@ -1,3 +1,17 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Job Hunter 求职自动化工具",
+  description: "爬取职位数据 + LLM 智能打分 + Streamlit 交互看板，一套完整的 AI 辅助求职 pipeline。923 条职位数据，从 0 到可用产品单日完成，使用 Claude Code 辅助开发。",
+  alternates: {
+    canonical: "/projects/job-hunter",
+  },
+  openGraph: {
+    title: "Job Hunter 求职自动化工具 | 万南天",
+    description: "爬取职位数据 + LLM 智能打分 + Streamlit 交互看板，一套完整的 AI 辅助求职 pipeline。",
+    url: "/projects/job-hunter",
+  },
+};
 export default function JobHunterPortfolioPage() {
   const navItems = [
     { label: "项目概览", href: "#overview" },
