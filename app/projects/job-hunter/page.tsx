@@ -135,9 +135,15 @@ def call_api(profile, job_content, job_requirements, api_key):
                 <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Job Hunter 求职自动化工具</h1>
                 <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">用工程手段解决自己的真实问题：Playwright 抓取职位数据，LLM 对照个人简历数据库逐条打分并给出投递建议，Streamlit 看板完成筛选与投递追踪。从 0 到可用产品单日完成。</p>
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <a href="#findings" className="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:opacity-90">查看设计决策</a>
-                  <a href="https://github.com/wnt0801/job-hunter" target="_blank" rel="noreferrer" className="rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100">GitHub</a>
-                  <a href="#code-highlight" className="rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100">关键代码</a>
+                  <a href="https://wnt0801-job-hunter.streamlit.app/" target="_blank" rel="noreferrer"
+                     className="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:opacity-90">🚀
+                    在线体验看板</a>
+                  <a href="#findings"
+                     className="rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100">查看设计决策</a>
+                  <a href="https://github.com/wnt0801/job-hunter" target="_blank" rel="noreferrer"
+                     className="rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100">GitHub</a>
+                  <a href="#code-highlight"
+                     className="rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100">关键代码</a>
                 </div>
               </div>
 
@@ -230,10 +236,20 @@ def call_api(profile, job_content, job_requirements, api_key):
             <h2 className="mt-2 text-2xl font-bold">求职追踪看板</h2>
           </div>
           <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-            <div className="mb-3 inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">streamlit · app.py</div>
+            <div
+                className="mb-3 inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">streamlit
+              · app.py
+            </div>
             <h3 className="text-lg font-bold">汇总指标 + 三维筛选 + 投递状态管理</h3>
-            <p className="mt-2 text-sm leading-7 text-slate-600">顶部展示总职位数、已投递、约面数与平均匹配度；下方表格支持按城市、匹配度区间、投递状态筛选，每条记录附 LLM 推荐语，投递状态修改后直接写回数据文件。</p>
-            <img src="/images/job_hunter_dashboard.png" alt="求职追踪看板" className="mt-5 w-full rounded-2xl border border-slate-200 bg-slate-50" />
+            <p className="mt-2 text-sm leading-7 text-slate-600">顶部展示总职位数、已投递、约面数与平均匹配度；下方表格支持按城市、匹配度区间、投递状态筛选，每条记录附
+              LLM 推荐语，投递状态修改后直接写回数据文件。</p>
+            <img src="/images/job_hunter_dashboard.png" alt="求职追踪看板"
+                 className="mt-5 w-full rounded-2xl border border-slate-200 bg-slate-50"/>
+            <div className="mt-4 flex items-center justify-between gap-3 rounded-2xl bg-slate-100 p-4">
+              <p className="text-sm text-slate-600">可在线体验完整看板（脱敏抽样数据，88 条）</p>
+              <a href="https://wnt0801-job-hunter.streamlit.app/" target="_blank" rel="noreferrer"
+                 className="shrink-0 rounded-2xl bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:opacity-90">打开看板</a>
+            </div>
           </div>
         </section>
 
